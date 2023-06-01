@@ -15,4 +15,15 @@ const images = [
 
 const list = document.querySelector(".gallery");
 
-const markup = listImg.map((element) => `<li><a href=${element}`);
+const { url: url, alt: alt } = images;
+
+const elementsAddList = images
+    .map(
+        (element) =>
+            `<li><img src="${element.url}" alt="${element.alt}" /></li>`
+    )
+    .join("");
+
+list.insertAdjacentHTML("afterbegin", elementsAddList);
+
+console.log(list);
