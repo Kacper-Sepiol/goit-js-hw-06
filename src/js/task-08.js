@@ -5,13 +5,14 @@ const form = document.querySelector(".login-form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const {
-        elements: { password, login },
+        elements: { password, email },
     } = event.currentTarget;
 
-    if (login.value === "" || password.value === "") {
-        return console.log("Nie wszystkie pola zostały uzupełnione!");
+    if (email.value === "" || password.value === "") {
+        return alert("Nie wszystkie pola zostały uzupełnione!");
     }
 
-    console.log(`Login: ${login}, Password: ${password.value}`);
+    console.log(email.value, password.value);
+
     event.currentTarget.reset();
 });
