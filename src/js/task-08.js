@@ -12,7 +12,7 @@ form.addEventListener("submit", (event) => {
         return alert("Nie wszystkie pola zostały uzupełnione!");
     }
 
-    console.log(email.value, password.value);
+    console.log({ email: email.value, Password: password.value });
 
     event.currentTarget.reset();
 });
